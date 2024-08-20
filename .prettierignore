@@ -1,0 +1,11 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ignore dotfiles
+.prettierrc
+.cspellcache
+
+# ignore node_modules & dist
+/dist
+/node_modules

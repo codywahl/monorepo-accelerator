@@ -1,0 +1,75 @@
+# Node.js and pnpm
+node_modules/
+*.log
+npm-debug.log*
+.pnpm/
+
+# Logs
+logs/
+*.log
+logs/*.log
+
+# Vite
+dist/
+.vite/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.*.local
+
+# IDEs and editors
+.idea/
+*.sublime-workspace
+
+# MacOS files
+.DS_Store
+
+# Linux files
+*~
+.cache/
+
+# Windows files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ESLint
+.eslintcache
+
+# Prettier
+.prettier-cache/
+
+# Jest
+coverage/
+
+# Build outputs
+dist/
+build/
+out/
+tmp/
+temp/
+
+# AWS CDK
+cdk.out/
+.cdk.staging/
+
+# pnpm store (optional, for performance caching)
+.pnpm-store/
+
+# Test output
+/coverage
+/.nyc_output
+
+# Generated files
+*.generated.*
+
+# Turborepo
+turbo/
+.turbo
+.turbo/
+
+# CSpell
+.cspellcache

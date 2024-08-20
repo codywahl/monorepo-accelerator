@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "chore/**"
+      - "feat/**"
+      - "bug/**"
+      - "hotfix/**"
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  run-lint-and-unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    # Currently these scripts are ran in steps to save on billable time. This way saves ~5min.
+    # If you want to run these in parallel, you can use a matrix or jobs.
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run branch naming convention check
+        run: pnpm check-branch-name
+
+      - name: Run ESlint check
+        run: pnpm lint:check
+
+      - name: Run Prettier format check
+        run: pnpm lint:format-check
+
+      - name: Run TS type checking
+        run: pnpm lint:type-check
+
+      - name: Run spellcheck
+        run: pnpm lint:spellcheck
+
+      - name: Run Jest tests
+        run: pnpm test:jest
