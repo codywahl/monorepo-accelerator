@@ -1,0 +1,10 @@
+# .husky/pre-commit
+
+echo "\n--------------- Running Pre-commit Hook ---------------\n"
+
+pnpm exec lint-staged
+
+echo "\n--------------- Pre-commit Hook Complete ---------------\n"
+
+# Uncomment the following line to test commit hooks
+#exit 1

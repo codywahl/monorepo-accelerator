@@ -1,0 +1,17 @@
+{
+  "name": "@monorepo-accelerator/backend",
+  "version": "1.0.0",
+  "description": "monorepo-accelerator backend",
+  "scripts": {
+    "test": "jest --silent --passWithNoTests --config jest.config.ts",
+    "build": "tsc -p ../../tsconfig.json",
+    "start": "node ../../dist/backend/src/greet.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@monorepo-accelerator/shared": "workspace:*"
+  }
+}

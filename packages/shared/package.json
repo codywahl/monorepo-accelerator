@@ -1,0 +1,13 @@
+{
+  "name": "@monorepo-accelerator/shared",
+  "version": "1.0.0",
+  "description": "monorepo-accelerator shared",
+  "scripts": {
+    "test": "jest --silent --passWithNoTests --config jest.config.ts",
+    "build": "tsc -p ../../tsconfig.json",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
